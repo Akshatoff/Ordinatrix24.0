@@ -17,20 +17,35 @@ const polygon = document.getElementById("polygon");
 const polygon2 = document.getElementById("polygon2");
 const polygon3 = document.getElementById("polygon3");
 const polygon4 = document.getElementById("polygon4");
+const mem = document.getElementById("opt");
+const alu = document.getElementById("opt1");
+const screenWidth = window.innerWidth;
 
+let heightMax = '35rem'; // Default height value
+let widthmax = '70rem'; // Default height value
+
+// Check if screen resolution is over 1900
+if (screenWidth > 1900) {
+    heightMax = '70rem'; // Set height to 70rem
+    widthmax = "100rem"
+}
+
+// Animation properties for rectangle
 const animationProperties = {
     targets: rectangle,
-    width: ['25rem', '70rem'],
-    height: ['15rem', '35rem'],
+    width: ['25rem', widthmax],
+    height: ['15rem', heightMax], // Use dynamic height
     easing: 'easeInOutQuad',
     duration: 2000,
     autoplay: true,
     loop: false
 };
+
+// Animation properties for rectangle2
 const animationProperties1 = {
     targets: rectangle2,
-    width: ['25rem', '70rem'],
-    height: ['15rem', '35rem'],
+    width: ['25rem', widthmax],
+    height: ['15rem', heightMax], // Use dynamic height
     easing: 'easeInOutQuad',
     duration: 2000,
     autoplay: true,
@@ -194,6 +209,8 @@ window.addEventListener("load", function() {
     
     const loaderVideo = document.getElementById("loader-video");
     const content = document.getElementById("fullpage");
+    const bg = document.getElementById("videobg");
+    bg.style.display = "none";
     content.style.display = "none";
     
     // Listen for the ended event on the loader video
@@ -202,9 +219,18 @@ window.addEventListener("load", function() {
         loaderVideo.style.display = "none";
         // Display the website content
         content.style.display = "block";
-       
+        bg.style.display = "block";
     });
 });
+
+
+function showPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
 
 const lenis = new Lenis();
 

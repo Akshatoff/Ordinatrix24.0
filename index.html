@@ -14,9 +14,9 @@
 	</div>
 	<div id="fullpage">
 	<div class="section" id="home">
-        <div id="model">
-        <model-viewer alt="Dandabanda model" src="./db2024.gltf" shadow-intensity="1" id="db" auto-rotate rotation-per-minute = "30deg"></model-viewer>
-        </div>
+         <video autoplay muted id="videobg" class="pc">
+        <source src="./home.mp4" type="video/mp4">
+      </video>
 		<h1 class="text" id="heading">Ordin@Trix24.0</h1>
 	</div>
 	<div class="section" id="about">
@@ -111,9 +111,11 @@
                     <div class="content">
                         <h3 class="text" id="card-head">AeroModel</h3>
                         <h4 class="text" id="card-d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero sunt voluptates animi et eveniet itaque ratione earum quisquam aliquid.</h4>
-                        <a href="./events/aero.html" class="link" id="abtn"><button class="btn visit" id="aero">Details</button></a>
+                        <button class="btn visit" id="aero" onclick="showPopup()">Details</button>
                     </div>
+
                 </div>
+                
                 <div id="card" class="card">
                     <div id="video-container" class="card-video">
                         <video class=".card-videos" muted >
@@ -167,11 +169,57 @@
                     </div>
                 </div>
             </div>
+            <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img src="./iot.png" alt="" class="logo">
+        <h2>AeroModel</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit alias quasi illo inventore veniam magnam aut, quibusdam, harum eligendi impedit?>
     </div>
-    <!-- <div class="section" id="team">
+</div>
+    </div>
+    <div class="section" id="team">
     	<h1 class="text" id="heading-team">Meet the Team</h1>
-    </div> -->
-    <div class="section" id="updates">
+        <h2 class="text" id="opt">Members</h2>
+        <div class="team-container">
+            <div id="mem-rect">
+                <div class="memimage"> </div>
+                <h2 class="text memname">Reyansh Adlakha</h2>
+                <h2 class="text memdes">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Expedita aperiam ad ex reiciendis iusto quo labore totam consectetur explicabo, eaque.</h2>
+            </div>
+            <div id="mem-rect">
+                <div class="memimage"></div>
+                <h2 class="text memname">Reyansh Adlakha</h2>
+                 <h2 class="text memdes">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Expedita aperiam ad ex reiciendis iusto quo labore totam consectetur explicabo, eaque.</h2>
+            </div>
+            <div id="mem-rect">
+                <div  class="memimage"></div>
+                <h2 class="text memname">Reyansh Adlakha</h2>
+                 <h2 class="text memdes">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Expedita aperiam ad ex reiciendis iusto quo labore totam consectetur explicabo, eaque.</h2>
+            </div>
+
+        </div>
+        <h2 class="text" id="opt1">Alumni</h2>
+        <div class="team-container">
+            <div id="mem-rect">
+                <div class="memimage"> </div>
+                <h2 class="text memname">Utkarsh Mishra</h2>
+                <h2 class="text memdes">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Expedita aperiam ad ex reiciendis iusto quo labore totam consectetur explicabo, eaque.</h2>
+            </div>
+            <div id="mem-rect">
+                <div class="memimage"></div>
+                <h2 class="text memname">Shiven</h2>
+                <h2 class="text memdes">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Expedita aperiam ad ex reiciendis iusto quo labore totam consectetur explicabo, eaque.</h2>
+            </div>
+            <div id="mem-rect">
+                <div  class="memimage"></div>
+                <h2 class="text memname">Naman Chandok</h2>
+                <h2 class="text memdes">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Expedita aperiam ad ex reiciendis iusto quo labore totam consectetur explicabo, eaque.</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="section" id="updates">
     	<h1 class="text" id="heading-update">Updates</h1>
         <div class="update-container">
             <iframe src="https://www.youtube.com/embed/VcufNlH_Lq4?si=o2cqwqtNPv1qnSUH" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -191,9 +239,7 @@
             </div>
         </div>
     </div>
-    <div class="section" id="trailer">
-        <video id="trailer-video" src="./trailer.mp4" muted></video>
-    </div>
+   
 
     </div>
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

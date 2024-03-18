@@ -9,11 +9,20 @@
 body, html {
 	width: 100%;
 	height: 100%;
-
+background-color: #040025;
 }
 
 video::-internal-media-controls-overlay-cast-button {
     display: none;
+}
+#videobg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 40rem;
+    z-index: 1;
+    opacity: 0.7;
 }
 
 #loader-video {
@@ -46,8 +55,7 @@ model-viewer {
 }
 
 #home {
-    background: url("./bg.jpg");
-    background-size: cover;
+
     height: 40rem;
 }
 
@@ -55,6 +63,8 @@ model-viewer {
 	width: 100%;
 	height: 100%;
 	background-color: #040025;
+    position: relative;
+    z-index: 2;
 }
 
 #heading {
@@ -62,7 +72,7 @@ model-viewer {
     font-family: "Noto Sans", sans-serif;
     font-weight: 100;
 	color: #fff;    
-	padding-top: -5rem;
+	padding-top: 15rem;
 	margin-left:  2rem;
 	letter-spacing: 2px;
     position: absolute;
@@ -320,6 +330,25 @@ transform: matrix(0.98, -0.01, 0.01, 0.98, 20, 10);
     width: 100%; /* Ensure content takes up full width */
 }
 
+h2 {
+    font-family: "Noto Sans", sans-serif;
+    color: #fff;
+}
+
+p {
+    margin-top: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+
+
+.logo {
+    margin-left: 10rem;
+    width: 15rem;
+    height: 15rem;
+}
+
 #card-head {
     font-size: 2rem;
     font-family: "Poppins", sans-serif;
@@ -361,11 +390,16 @@ transform: matrix(0.98, -0.01, 0.01, 0.98, 20, 10);
 
 }
 
+#team {
+    padding-bottom: 5rem;
+}
+
 #heading-team {
     font-size: 4rem;
-    margin-left: 4rem;
+    margin-right:  4rem;
     color: #fff;
-    margin-top: -15rem;
+    font-family: "Montserrat", sans-serif;
+    text-align: right;
 }
 
 .link {
@@ -476,8 +510,191 @@ iframe {
     border: 2px solid white;
 }
 
+
+.team-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#mem-rect {
+background: rgba(217, 217, 217, 0.19);
+border: 1px solid #FFFFFF;
+backdrop-filter: blur(6.25px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 28px;
+transform: matrix(1, -0.01, 0.01, 1, 0, 0);
+width: 22rem;
+height: 14rem;
+position: relative;
+}
+
+.memimage {
+   width: 8rem;
+   height: 8rem;
+   border-radius: 100%;
+   background-image: url("./reyansh.jpg");
+   position: absolute;
+   z-index: 10;
+   background-size: contain;
+   left: 7rem;
+   top: -4rem;
+}
+
+.memname {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    width: 22rem;
+    text-align: center;
+}
+
+#opt {
+     margin-top: 2rem;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 3rem;
+}
+#opt1 {
+     margin-top: 3rem;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 3rem;
+}
+
+.memdes {
+     margin-top: 1rem;
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    width: 20rem;
+    margin-left: 1rem;
+}
+
+.active {
+    color: #2AE1FF;
+}
+
 @media screen and (min-width: 1300px){
     #model {
         height: 55vh;
     }  
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 200ms ease-in-out;
+}
+
+.popup-content {
+    background-color: #040025;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1300px){
+    .card-container {
+        margin-left: 6rem;
+    }
+}
+
+
+@media screen and (min-width:1900px){
+    #home {
+        height: 70rem;
+    }
+    #heading {
+        padding-top: 45rem;
+        font-size: 15rem;
+        margin-left: 6rem;
+    }
+    #about, #about1 {
+        height: 70rem;
+    }
+    .rectangle {
+        margin-top: 35rem;
+    }
+
+    #rect {
+        width: 30rem;
+        height: 600px;
+        margin-top: -28rem;
+    }
+    #rect1 {
+        width: 30rem;
+        height: 600px;
+        margin-top: -28rem;
+    }
+    #db {
+        height: 600px;
+        width: 35rem;
+    }
+    #pyro {
+        margin-top: 5rem;
+        margin-left: 2rem;
+    }
+    #description {
+        font-size: 2rem;
+        width: 40rem;
+    }
+    #description1 {
+        font-size: 2rem;
+        width: 40rem;
+    }
+    #polygon2 {
+        margin-top: -2rem;
+    }
+    .content-about {
+        height: 65rem;
+        }
+    .rectangle::before {
+        width: 100rem;
+  height: 70rem;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: inherit;
+  box-shadow: inset 0 0 0 1000px rgba(1,21,34,0.7);
+  filter: blur(10px);
+    }
+    .card-container {
+        margin-left: 24rem;
+    }
+
 }

@@ -6,6 +6,11 @@
 	box-sizing: border-box;
 }
 
+h1,h2,h3,p {
+    pointer-events: none;
+    color: #fff;
+}
+
 body, html {
 	width: 100%;
 	height: 100%;
@@ -274,6 +279,9 @@ transform: matrix(0.98, -0.01, 0.01, 0.98, 20, 10);
 
 #events {
     padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #heading-events {
@@ -282,7 +290,7 @@ transform: matrix(0.98, -0.01, 0.01, 0.98, 20, 10);
     text-align: center;
     font-weight: 400;
     padding-top: 1rem;
-    margin-left: 5rem;
+
     opacity:  0;
     color: #fff;    
     
@@ -290,7 +298,7 @@ transform: matrix(0.98, -0.01, 0.01, 0.98, 20, 10);
 .card-container {
     display: flex;
     flex-direction: column;
-    margin-left: 2.5rem;
+    margin-left: 9.8rem;
     margin-top: 2rem;
     gap: 2rem;
 }
@@ -306,9 +314,7 @@ transform: matrix(0.98, -0.01, 0.01, 0.98, 20, 10);
     opacity:  0;
 }
 
-.card-container .card:nth-child(even) {
-   margin-left: 15rem;
-}
+
 
 .card-video video {
     border-radius: 20px;
@@ -510,13 +516,38 @@ iframe {
     border: 2px solid white;
 }
 
-
+.wrapper {
+  position: relative;
+}
+.wrapper:before, .wrapper:after {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 100%;
+}
+.wrapper:before {
+  left: 0;
+  background: linear-gradient(90deg, #222, transparent);
+}
+.wrapper:after {
+  right: 0;
+  background: linear-gradient(-90deg, #222, transparent);
+}
 .team-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
+      position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding-top: 5rem;
+}
+.items.active {
+  cursor: grab;
 }
 
 #mem-rect {
@@ -529,6 +560,10 @@ transform: matrix(1, -0.01, 0.01, 1, 0, 0);
 width: 22rem;
 height: 14rem;
 position: relative;
+display: inline-block;
+  margin-left: 20px;
+  user-select: none;
+  line-height: 230px;
 }
 
 .memimage {
@@ -543,9 +578,13 @@ position: relative;
    top: -4rem;
 }
 
+.memimage:last-child {
+    margin-right: 20px;
+}
+
 .memname {
-    margin-top: 5rem;
-    font-size: 1.5rem;
+    margin-top: -1rem;
+    font-size: 2rem;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     width: 22rem;
@@ -570,8 +609,8 @@ position: relative;
 }
 
 .memdes {
-     margin-top: 1rem;
-    font-size: 0.8rem;
+     margin-top: -10rem;
+    font-size: 1rem;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     text-align: center;
@@ -606,10 +645,10 @@ position: relative;
     background-color: #040025;
     margin: 10% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 2px solid #fff;
     width: 80%;
     max-width: 600px;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -629,7 +668,7 @@ position: relative;
 
 @media screen and (min-width:1300px){
     .card-container {
-        margin-left: 6rem;
+        margin-left: 12.8rem;
     }
 }
 
@@ -697,4 +736,41 @@ position: relative;
         margin-left: 24rem;
     }
 
+}
+#guide {
+    height: 50rem;
+
+}
+
+#guide-heading {
+    font-size: 5rem;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;    
+    padding-top: 2rem;
+    margin-left:  2rem;
+    text-align: center;
+}
+
+.row {
+    padding-top:  3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+}
+
+p {
+    width: 35rem;
+    font-family: "Noto Sans", sans-serif;
+    flex: 1;
+    font-weight: 100;
+}
+
+.shade {
+    text-decoration: none;
+    color: rgb(149,84,255);
+    cursor: pointer;
+}
+
+.shade:hover {
+    color: #0EECE4;
 }

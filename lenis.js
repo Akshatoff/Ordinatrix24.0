@@ -19,6 +19,8 @@ const polygon3 = document.getElementById("polygon3");
 const polygon4 = document.getElementById("polygon4");
 const mem = document.getElementById("opt");
 const alu = document.getElementById("opt1");
+const memcontainer = document.getElementById("memcontainer");
+const alucontainer = document.getElementById("alucontainer");
 const screenWidth = window.innerWidth;
 
 let heightMax = '35rem'; // Default height value
@@ -191,19 +193,35 @@ ScrollTrigger.create({
     once: false 
 });
 
+
+
+// Attach event listeners to each card
 cards.forEach((card, index) => {
     card.addEventListener("mouseenter", function() {
-        videos.forEach((video, i) => {
-            if (i !== index) {
-                video.pause();
-            }
-        });
-        
-        videos[index].play();
+        videos[index].play(); // Play the video when mouse enters
     });
 
-  
-})
+    card.addEventListener("mouseleave", function() {
+        videos[index].pause(); // Pause the video when mouse leaves
+        videos[index].currentTime = 0; // Reset video to beginning
+    });
+});
+
+
+window.addEventListener("blur", function() {
+    videos.forEach((video) => {
+        video.reset();
+    });
+});
+
+// Play the video again when the window regains focus
+window.addEventListener("focus", function() {
+    const activeIndex = [...cards].findIndex(card => card.matches(":hover"));
+    if (activeIndex !== -1) {
+        videos[activeIndex].play();
+    }
+});
+
 
 window.addEventListener("load", function() {
     
@@ -241,3 +259,4 @@ gsap.ticker.add((time) => {
 });
 
 gsap.ticker.lagSmoothing(0);
+

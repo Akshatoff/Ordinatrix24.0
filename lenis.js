@@ -227,8 +227,7 @@ window.addEventListener("load", function() {
     
     const loaderVideo = document.getElementById("loader-video");
     const content = document.getElementById("fullpage");
-    const bg = document.getElementById("videobg");
-    bg.style.display = "none";
+    
     content.style.display = "none";
     
     // Listen for the ended event on the loader video
@@ -237,7 +236,7 @@ window.addEventListener("load", function() {
         loaderVideo.style.display = "none";
         // Display the website content
         content.style.display = "block";
-        bg.style.display = "block";
+        loaderVideo.style.zIndex = '-10'
     });
 });
 

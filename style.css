@@ -60,8 +60,12 @@ model-viewer {
 }
 
 #home {
-
+    background-image: url('./posterweb.png');
+    background-size: cover;
     height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section {
@@ -72,16 +76,11 @@ model-viewer {
     z-index: 2;
 }
 
-#heading {
-	 font-size: 11rem;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 100;
-	color: #fff;    
-	padding-top: 15rem;
-	margin-left:  2rem;
-	letter-spacing: 2px;
-    position: absolute;
-    z-index: 100;
+#headingi {
+	    
+	padding-top: 5rem;
+
+	width:  78rem;
 }
 
 
@@ -178,7 +177,7 @@ z-index: 5;
 #db {
 position: absolute;
 width: 20rem;
-height: 350px;
+height: 650px;
 transform: matrix(0.98, -0.01, 0.01, 0.98, 20, 6);
 
 }
@@ -745,10 +744,9 @@ display: inline-block;
     #home {
         height: 70rem;
     }
-    #heading {
-        padding-top: 45rem;
-        font-size: 15rem;
-        margin-left: 6rem;
+    #headingi {
+        padding-top: 15rem;
+        width: 120rem;
     }
     #about, #about1 {
         height: 70rem;
@@ -768,8 +766,10 @@ display: inline-block;
         margin-top: -28rem;
     }
     #db {
-        height: 600px;
+        height: 900px;
         width: 35rem;
+        top: -200px;
+        left: -100px;
     }
     #pyro {
         margin-top: 5rem;
@@ -801,7 +801,10 @@ display: inline-block;
   filter: blur(10px);
     }
     .card-container {
-        margin-left: 24rem;
+        margin-left: 32rem;
+    }
+    .row {
+        margin-left: 20rem;
     }
 
 }

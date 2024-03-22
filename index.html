@@ -32,9 +32,9 @@
 </defs>
 </svg>
 
-            <h1 class="text" id="heading-about">It all started 19 years ago.</h1>
+            <h1 class="text" id="heading-about">It all started 19 years ago…</h1>
         <div class="container">
-        <h2 class="text" id="description"> A fusion of creativity, talent and skill is what Ordin@trix is all about. Ordin@trix has evolved through the years moving from an interschool festival at the state level to an international event. Over the years we have had students from China, Muscat, Japan and other countries as regular participants.</h2>
+        <h2 class="text" id="description">A fusion of creativity, talent, and skill is what Ordin@trix is all about. Ordin@trix has evolved through the years moving from an inter-school festival at the state level to an international accolade. Over the years, we have seen participation by students from Muscat, China, Japan, and several other countries.</h2>
         <div id="rect">
             <img src="./db.png" alt="Dandabanda" id="db">
         </div>
@@ -72,9 +72,9 @@
 </defs>
 </svg>
 
-            <h1 class="text" id="heading-about1">PYROTECH members are</h1>
+            <h1 class="text" id="heading-about1">PYROTECH members are…</h1>
         <div class="container">
-        <h2 class="text" id="description1"> an elite team of student computer enthusiasts. They have represented the school in various competitions and won laurels in events such as web designing, software development, image editing, movie making, 3-D modelling, Robotics, photography and others.</h2>
+        <h2 class="text" id="description1">an elite team of student computer enthusiasts. They have represented the school in various competitions, and have won laurels in events such as web designing, software development, image editing, movie making, 3D modelling, Robotics, photography, and several others.</h2>
         <div id="rect1">
             <img src="./pyrologo.png" alt="Dandabanda" id="pyro">
         </div>
@@ -100,23 +100,9 @@
 
     <div class="section" id="events">
     	<h1 class="text" id="heading-events">Events</h1>
-            <div class="card-container">
-                <div id="card" class="card">
-                    <div id="video-container" class="card-video">
-                        <video class=".card-videos" muted>
-                            <source src="./1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="content">
-                        <h3 class="text" id="card-head">AeroModel</h3>
-                        <h4 class="text" id="card-d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero sunt voluptates animi et eveniet itaque ratione earum quisquam aliquid.</h4>
-                        <button class="btn visit" id="aero" onclick="showPopup()">Details</button>
-                    </div>
+      <div class="card-container">
 
-                </div>
-                
-                <div id="card" class="card">
+        <div id="card_movie" class="card">
                     <div id="video-container" class="card-video">
                         <video class=".card-videos" muted >
                             <source src="./1.mp4" type="video/mp4">
@@ -124,12 +110,13 @@
                         </video>
                     </div>
                     <div class="content">
-                        <h3 class="text" id="card-head">AeroModel</h3>
-                        <h4 class="text" id="card-d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero sunt voluptates animi et eveniet itaque ratione earum quisquam aliquid.</h4>
-                        <button class="btn visit" id="aero">Details</button>
+                        <h3 class="text" id="card-head">Movie@trix</h3>
+                        <h4 class="text" id="card-d">Create a narrative film about a robot protagonist or a humanoid wanting to complete a certain quest that they must overcome.</h4>
+                        <button class="btn visit" id="movie" onclick="showPopup('movie')">Details</button>
                     </div>
-                </div>
-                <div id="card" class="card">
+        </div>
+
+        <div id="card_aero" class="card">
                     <div id="video-container" class="card-video">
                         <video class=".card-videos" muted >
                             <source src="./1.mp4" type="video/mp4">
@@ -137,12 +124,13 @@
                         </video>
                     </div>
                     <div class="content">
-                        <h3 class="text" id="card-head">AeroModel</h3>
-                        <h4 class="text" id="card-d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero sunt voluptates animi et eveniet itaque ratione earum quisquam aliquid.</h4>
-                        <button class="btn visit" id="aero">Details</button>
+                        <h3 class="text" id="card-head">Aero Modelling</h3>
+                        <h4 class="text" id="card-d">Design your own glider with the help of a chuck gliders kit, and then take flight.</h4>
+                        <button class="btn visit" id="aero" onclick="showPopup('aero')">Details</button>
                     </div>
-                </div>
-                <div id="card" class="card">
+        </div>
+
+        <div id="card_comic" class="card">
                     <div id="video-container" class="card-video">
                         <video class=".card-videos" muted >
                             <source src="./1.mp4" type="video/mp4">
@@ -150,12 +138,13 @@
                         </video>
                     </div>
                     <div class="content">
-                        <h3 class="text" id="card-head">AeroModel</h3>
-                        <h4 class="text" id="card-d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero sunt voluptates animi et eveniet itaque ratione earum quisquam aliquid.</h4>
-                        <button class="btn visit" id="aero">Details</button>
+                        <h3 class="text" id="card-head">Comic Strip</h3>
+                        <h4 class="text" id="card-d">Make a comic strip on the prompt given on the spot, using Canva.</h4>
+                        <button class="btn visit" id="comic" onclick="showPopup('comic')">Details</button>
                     </div>
-                </div>
-                <div id="card" class="card">
+        </div>
+
+        <div id="card_race" class="card">
                     <div id="video-container" class="card-video">
                         <video class=".card-videos" muted >
                             <source src="./1.mp4" type="video/mp4">
@@ -163,27 +152,300 @@
                         </video>
                     </div>
                     <div class="content">
-                        <h3 class="text" id="card-head">AeroModel</h3>
-                        <h4 class="text" id="card-d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero sunt voluptates animi et eveniet itaque ratione earum quisquam aliquid.</h4>
-                        <button class="btn visit" id="aero">Details</button>
+                        <h3 class="text" id="card-head">Bot Race</h3>
+                        <h4 class="text" id="card-d">Design a wired or a wireless, manually controlled robot that traverses through all hurdles and completes the race track.</h4>
+                        <button class="btn visit" id="race" onclick="showPopup('race')">Details</button>
                     </div>
-                </div>
-            </div>
-            <div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <img src="./iot.png" alt="" class="logom">
-        <h2 class="text" id="heading-popup">AeroModel</h2>
-        <p class="text" id="description-popup">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit alias quasi illo inventore veniam magnam aut, quibusdam, harum eligendi impedit?</p>
-<a href="./events/aero.html" class="link">
-<li id="init">
-            Details
-            <span></span><span></span><span></span><span></span>
-          </li>
-</a>
+        </div>
+
+        <div id="card_snap" class="card">
+                    <div id="video-container" class="card-video">
+                        <video class=".card-videos" muted >
+                            <source src="./1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="content">
+                        <h3 class="text" id="card-head">Snap@trix</h3>
+                        <h4 class="text" id="card-d">Lorem ipsum, dolor sit amet.</h4>
+                        <button class="btn visit" id="snap" onclick="showPopup('snap')">Details</button>
+                    </div>
+        </div>
+
+        <div id="card_crypt" class="card">
+                    <div id="video-container" class="card-video">
+                        <video class=".card-videos" muted >
+                            <source src="./1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="content">
+                        <h3 class="text" id="card-head">Crypt@trix</h3>
+                        <h4 class="text" id="card-d">Lorem ipsum, dolor sit amet.</h4>
+                        <button class="btn visit" id="crypt" onclick="showPopup('crypt')">Details</button>
+                    </div>
+        </div>
+
+        <div id="card_ad" class="card">
+                    <div id="video-container" class="card-video">
+                        <video class=".card-videos" muted >
+                            <source src="./1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="content">
+                        <h3 class="text" id="card-head">Ad@trix</h3>
+                        <h4 class="text" id="card-d">Lorem ipsum, dolor sit amet.</h4>
+                        <button class="btn visit" id="ad" onclick="showPopup('ad')">Details</button>
+                    </div>
+        </div>
+
+        <div id="card_script" class="card">
+          <div id="video-container" class="card-video">
+              <video class=".card-videos" muted >
+                  <source src="./1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="content">
+              <h3 class="text" id="card-head">Script@trix</h3>
+              <h4 class="text" id="card-d">Lorem ipsum, dolor sit amet.</h4>
+              <button class="btn visit" id="script" onclick="showPopup('script')">Details</button>
+          </div>
+        </div>
+
+        <div id="card_game" class="card">
+          <div id="video-container" class="card-video">
+              <video class=".card-videos" muted >
+                  <source src="./1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="content">
+              <h3 class="text" id="card-head">Game@trix</h3>
+              <h4 class="text" id="card-d">Lorem ipsum, dolor sit amet.</h4>
+              <button class="btn visit" id="game" onclick="showPopup('game')">Details</button>
+          </div>
+        </div>
+
+        <div id="card_kuriovation" class="card">
+          <div id="video-container" class="card-video">
+              <video class=".card-videos" muted >
+                  <source src="./1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="content">
+              <h3 class="text" id="card-head">Kuriovation</h3>
+              <h4 class="text" id="card-d">Lorem ipsum, dolor sit amet.</h4>
+              <button class="btn visit" id="kuriovation" onclick="showPopup('kuriovation')">Details</button>
+          </div>
+        </div>
+
+        <div id="card_scratch" class="card">
+          <div id="video-container" class="card-video">
+              <video class=".card-videos" muted >
+                  <source src="./1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="content">
+              <h3 class="text" id="card-head">Scratch</h3>
+              <h4 class="text" id="card-d">Lorem ipsum, dolor sit amet.</h4>
+              <button class="btn visit" id="scratch" onclick="showPopup('scratch')">Details</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="popup_movie" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('movie')">&times;</span>
+          <img src="./thumbnails/movie.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Movie@trix</h2>
+          <p class="text" id="description-popup">
+            Create a narrative film about a robot protagonist or a humanoid wanting to complete a certain quest that they must overcome.
+          </p>
+          <a href="./events/movie.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_aero" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('aero')">&times;</span>
+          <img src="./thumbnails/aero.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Aero Modelling</h2>
+          <p class="text" id="description-popup">
+            Create a narrative film about a robot protagonist or a humanoid wanting to complete a certain quest that they must overcome.
+          </p>
+          <a href="./events/movie.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_comic" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('comic')">&times;</span>
+          <img src="./comic.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Comic Strip</h2>
+          <p class="text" id="description-popup">
+            Create a narrative film about a robot protagonist or a humanoid wanting to complete a certain quest that they must overcome.
+          </p>
+          <a href="./events/movie.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_race" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('race')">&times;</span>
+          <img src="./race.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Bot Race</h2>
+          <p class="text" id="description-popup">
+            Create a narrative film about a robot protagonist or a humanoid wanting to complete a certain quest that they must overcome.
+          </p>
+          <a href="./events/movie.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_snap" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('snap')">&times;</span>
+          <img src="./snap.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Snap@trix</h2>
+          <p class="text" id="description-popup">
+            Lorem ipsum, dolor sit amet.
+          </p>
+          <a href="./events/snap.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_crypt" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('crypt')">&times;</span>
+          <img src="./crypt.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Crypt@trix</h2>
+          <p class="text" id="description-popup">
+            Lorem ipsum, dolor sit amet.
+          </p>
+          <a href="./events/crypt.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_ad" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('ad')">&times;</span>
+          <img src="./ad.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Ad@trix</h2>
+          <p class="text" id="description-popup">
+            Lorem ipsum, dolor sit amet.
+          </p>
+          <a href="./events/ad.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_script" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('script')">&times;</span>
+          <img src="./script.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Script@trix</h2>
+          <p class="text" id="description-popup">
+            Lorem ipsum, dolor sit amet.
+          </p>
+          <a href="./events/script.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_game" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('game')">&times;</span>
+          <img src="./game.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Game@trix</h2>
+          <p class="text" id="description-popup">
+            Lorem ipsum, dolor sit amet.
+          </p>
+          <a href="./events/game.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_kuriovation" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('kuriovation')">&times;</span>
+          <img src="./kuriovation.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Kuriovation</h2>
+          <p class="text" id="description-popup">
+            Lorem ipsum, dolor sit amet.
+          </p>
+          <a href="./events/kuriovation.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
+      <div id="popup_scratch" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('scratch')">&times;</span>
+          <img src="./scratch.png" alt="" class="logom">
+          <h2 class="text" id="heading-popup">Scratch</h2>
+          <p class="text" id="description-popup">
+            Lorem ipsum, dolor sit amet.
+          </p>
+          <a href="./events/scratch.html" class="link">
+            <li id="init">
+              Details
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </a>
+        </div>
+      </div>
+
     </div>
-</div>
-</div>
     
     <div class="section" id="team">
     	<h1 class="text" id="heading-team">Meet the Team</h1>

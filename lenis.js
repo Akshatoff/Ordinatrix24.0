@@ -241,12 +241,12 @@ window.addEventListener("load", function() {
 });
 
 
-function showPopup() {
-    document.getElementById("popup").style.display = "block";
+function showPopup(event) {
+    document.getElementById(`popup_${event}`).style.display = "block";
 }
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
+function closePopup(event) {
+    document.getElementById(`popup_${event}`).style.display = "none";
 }
 
 const lenis = new Lenis();

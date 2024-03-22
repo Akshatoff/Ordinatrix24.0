@@ -60,7 +60,8 @@ model-viewer {
 }
 
 #home {
-
+    background-image: url('./posterweb.png');
+    background-size: cover;
     height: 40rem;
 }
 
@@ -72,16 +73,11 @@ model-viewer {
     z-index: 2;
 }
 
-#heading {
-	 font-size: 11rem;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 100;
-	color: #fff;    
-	padding-top: 15rem;
-	margin-left:  2rem;
-	letter-spacing: 2px;
-    position: absolute;
-    z-index: 100;
+#headingi {
+	    
+	padding-top: 20rem;
+	margin-left:  10rem;
+	width:  95rem;
 }
 
 
